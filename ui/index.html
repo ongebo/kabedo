@@ -11,9 +11,11 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/login-form.css" />
     <title>Kabedo</title>
   </head>
   <body>
+    <!-- The Landing Page Content. -->
     <div class="main-content">
       <div class="column first">
         <div class="value-statement">
@@ -26,7 +28,7 @@
       <div class="column second">
         <div class="signup">
           <h2 class="title">Join Kabedo...</h2>
-          <form action="#">
+          <form action="#" class="signup-form">
             <span>Username:</span>
             <input
               type="text"
@@ -55,9 +57,32 @@
             /><br />
             <input type="submit" value="Sign Up" />
           </form>
-          <p id="footer-text">Already Registered? <button>Login</button></p>
+          <p class="footer-text">
+            Already Registered? <button class="login-button">Login</button>
+          </p>
         </div>
       </div>
     </div>
+
+    <!-- Popup Login Form. -->
+    <div class="login-modal">
+      <div class="login-modal-content">
+        <span class="close-button">&times;</span>
+        <h2 class="title">Login to Kabedo...</h2>
+        <form action="#" class="login-form">
+          <span>Email:</span>
+          <input type="email" name="email" placeholder="Enter email" /><br />
+          <span>Password:</span>
+          <input
+            type="password"
+            name="password"
+            placeholder="Enter password"
+          /><br />
+          <input type="submit" value="Login" />
+        </form>
+        <p class="footer-text">Forgot Password? <button>Reset...</button></p>
+      </div>
+    </div>
+    <script src="js/login-form.js"></script>
   </body>
 </html>

@@ -1,0 +1,83 @@
+.login-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  overflow: scroll;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 0.6s, opacity 0.6s linear;
+}
+
+.show-modal {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.6s linear;
+}
+
+.login-modal-content {
+  width: 30%;
+  margin: auto;
+  border-radius: 6px;
+  background: rgba(240, 240, 240, 0.9);
+  padding: 10px;
+  animation: slide-up 0.6s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-up {
+  from {
+    margin-top: 10%;
+  }
+  to {
+    margin-top: 0;
+  }
+}
+
+.show-login-modal-content {
+  animation: slide-down 0.6s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-down {
+  from {
+    margin-top: 0;
+  }
+  to {
+    margin-top: 10%;
+  }
+}
+
+.login-form {
+  padding: 0 5%;
+}
+
+.close-button {
+  font-size: 2em;
+  cursor: pointer;
+  transition: color 0.5s;
+}
+
+.close-button:hover {
+  color: red;
+}
+
+.login-modal-content .title {
+  margin-top: 0;
+}
+
+/* Adjust modal width for smartphone screen sizes. */
+@media only screen and (max-width: 600px) {
+  .login-modal-content {
+    width: 90%;
+  }
+}
+
+/* Adjust modal width for tablet screen sizes. */
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+  .login-modal-content {
+    width: 50%;
+  }
+}
