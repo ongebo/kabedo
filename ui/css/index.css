@@ -12,6 +12,10 @@ body {
   color: #0a0966;
 }
 
+.fixed {
+  overflow: hidden;
+}
+
 .main-content {
   width: 90%;
   margin: auto;
@@ -19,7 +23,6 @@ body {
   border-radius: 6px;
   background: rgba(240, 240, 240, 0.9);
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
-
   display: flex;
   justify-content: center;
 }
@@ -50,7 +53,7 @@ body {
   margin: auto;
 }
 
-form {
+.signup-form {
   padding: 10px 20%;
 }
 
@@ -82,12 +85,12 @@ input[type="submit"]:hover {
   background-color: #000ddd;
 }
 
-#footer-text {
+.footer-text {
   text-align: center;
   font-size: 0.9em;
 }
 
-#footer-text button {
+.footer-text button {
   padding: 5px 8px;
   background: #115119;
   color: white;
@@ -97,10 +100,11 @@ input[type="submit"]:hover {
   transition: background-color 1s;
 }
 
-#footer-text button:hover {
+.footer-text button:hover {
   background-color: #1e842a;
 }
 
+/* Adjust dimensions for smartphone screen sizes. */
 @media only screen and (max-width: 600px) {
   .main-content {
     width: 100%;
@@ -117,6 +121,7 @@ input[type="submit"]:hover {
   }
 }
 
+/* Adjust dimensions for tablet screen sizes. */
 @media only screen and (min-width: 600px) and (max-width: 800px) {
   .main-content {
     flex-direction: column;

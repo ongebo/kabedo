@@ -25,14 +25,15 @@ This is a more detailed description of the change being made. It may be omitted 
 ### Footer
 It indicates the action the commit makes the to the relevant Pivotal Tracker story e.g. [Finishes #\<story-id\>]. In case the commit fixes or resolves an issue, this is where is should be indicated. 
 
-## Pull Requests
+## Pull Requests (PRs)
 Each PR must have a title, a description, and a label.
 ### PR Title
 A short and descriptive message, it should follow the same rules of a commit message header. Do not indicate the Pivotal Tracker story ID in the PR title.
 ### PR Description
-It should have four headings:
-* **Task Accomplished:** This is a statement similar to the title of what the PR does. Indicate bug fixes, chores, or feature additions in this statement.
+It should have the following headings, where applicable:
+* **Goal to Achieve:** This is a statement similar to the title of what the PR does. Indicate bug fixes, chores, or feature additions in this statement in present tense.
 * **Changes to Make:** A listing in present tense of the changes that are to be made to the codebase. Think of these as atomic commit messages.
+* **Manual Testing:** The procedure for testing the new change being introduced by the PR. If a new feature is being added, describe how it should be manually tested by other developers.
 * **Images/Screenshots:** Where applicable, include these to show what the case was **before** and **after** the change to be made.
 * **Relevant PT Stories:** Hyperlinks to the associated Pivotal Tracker stories. The Hyperlink texts should be the IDs of the relevant PT stories.
 ### PR Labels
