@@ -87,3 +87,29 @@
     width: 50%;
   }
 }
+
+.password-reset-dialog {
+  position: fixed;
+  text-align: center;
+  top: 0;
+  transition: top 0.5s linear;
+  visibility: hidden;
+  width: 100%;
+}
+
+.password-reset-message {
+  background-color: #9ea10a;
+  border-radius: 5px;
+  opacity: 0;
+  padding: 8px;
+  transition: opacity 0.5s linear;
+}
+
+.show-reset-dialog {
+  top: 4%;
+  visibility: visible;
+}
+
+.show-reset-message {
+  opacity: 1;
+}
