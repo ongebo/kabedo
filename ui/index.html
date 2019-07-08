@@ -10,6 +10,7 @@
       integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/login-form.css" />
     <title>Kabedo</title>
@@ -80,9 +81,20 @@
           /><br />
           <input type="submit" value="Login" />
         </form>
-        <p class="footer-text">Forgot Password? <button>Reset...</button></p>
+        <p class="footer-text">
+          Forgot Password? <button id="reset-password">Reset...</button>
+        </p>
       </div>
     </div>
+
+    <!-- Password Reset Dialog. -->
+    <div class="password-reset-dialog">
+      <span class="password-reset-message">
+        Check your email for a password reset link...
+      </span>
+    </div>
+
+    <script src="js/password-reset.js"></script>
     <script src="js/login-form.js"></script>
   </body>
 </html>
