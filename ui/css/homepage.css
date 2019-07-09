@@ -1,0 +1,256 @@
+body {
+  background: rgb(240, 240, 240); /* Fallback background. */
+  background: rgba(240, 240, 240, 0.9);
+}
+
+.header {
+  align-items: baseline;
+  background: #0a0966;
+  box-shadow: 0 0 10px rgba(10, 9, 102, 0.6);
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.left-content {
+  display: flex;
+}
+
+.right-content {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header-item {
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  transition: background-color 0.8s;
+}
+
+.header-item:hover {
+  background-color: #000ddd;
+}
+
+.logout-button {
+  background: #0a0966;
+  border: none;
+  font-size: 1em;
+}
+
+@media only screen and (max-width: 400px) {
+  .header,
+  .left-content {
+    flex-direction: column;
+  }
+
+  .left-content,
+  .right-content {
+    flex-basis: 100%;
+  }
+}
+
+.content {
+  margin: auto;
+  width: 50%;
+}
+
+/* Adjust dimensions for smartphone screen sizes. */
+@media only screen and (max-width: 600px) {
+  .content {
+    /* flex-direction: column; */
+    width: 100%;
+  }
+}
+
+/* Adjust dimensions for tablet screen sizes. */
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+  .content {
+    width: 80%;
+  }
+}
+
+.post {
+  box-shadow: 0 0 8px rgba(10, 9, 102, 0.6);
+  margin-top: 20px;
+  padding: 5px;
+}
+
+.author {
+  align-items: center;
+  border-bottom: 1px solid #0a0966;
+  display: flex;
+  padding: 10px 0;
+}
+
+.author-avatar {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+
+.author-name {
+  padding-left: 10px;
+}
+
+.post-image {
+  width: 100%;
+}
+
+.post-actions {
+  border-bottom: 1px solid #0a0966;
+  border-top: 1px solid #0a0966;
+  display: flex;
+  justify-content: space-between; /* Fallback */
+  justify-content: space-evenly;
+}
+
+.reaction,
+.comment,
+.share {
+  cursor: pointer;
+  padding: 10px 5px;
+  transition: color 0.8s;
+}
+
+.reaction:hover,
+.comment:hover,
+.share:hover {
+  color: #000ddd;
+}
+
+.footer {
+  background: #0a0966;
+  margin-top: 20px;
+}
+
+.footer p {
+  color: white;
+  margin: 0;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.active,
+.active:hover {
+  color: #296127;
+}
+
+.post-comment {
+  border-bottom: 1px solid #0a0966;
+  padding: 5px;
+}
+
+.comment-author {
+  align-items: center;
+  display: flex;
+}
+
+.comment-author img {
+  border-radius: 50%;
+  height: 40px;
+  margin-right: 5px;
+  width: 40px;
+}
+
+.comment-text {
+  padding: 5px 0;
+}
+
+.comment-reaction {
+  display: flex;
+  padding: 2px 0;
+}
+
+.comment-like {
+  margin-right: 30px;
+}
+
+.comment-like:hover,
+.comment-dislike:hover {
+  color: green;
+  cursor: pointer;
+}
+
+.comment-action {
+  align-items: baseline;
+  display: flex;
+  justify-content: flex-start;
+  padding: 2px 0;
+}
+
+.comment-action-edit,
+.comment-action-delete {
+  color: #000ddd;
+  font-size: 0.8em;
+  margin-right: 3px;
+}
+
+.comment-action-edit:hover,
+.comment-action-delete:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.post-comments {
+  display: flex;
+  flex-direction: column;
+}
+
+.previous-comments,
+.next-comments {
+  font-size: 0.9em;
+  padding: 5px 0;
+  text-align: center;
+}
+
+.previous-comments:hover,
+.next-comments:hover {
+  color: #000ddd;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.create-comment {
+  align-items: center;
+  display: flex;
+  justify-content: space-between; /* Fallback. */
+  justify-content: space-evenly;
+  padding-top: 15px;
+}
+
+.create-comment img {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+}
+
+.create-comment-text {
+  border: 1px solid lightgray;
+  border-radius: 20px;
+  flex: 2;
+  font-size: 0.9em;
+  margin: 0 5px;
+  padding: 8px;
+  transition: border 1s;
+}
+
+.create-comment-text:hover {
+  border: 1px solid #0a0966;
+}
+
+.create-comment-button {
+  background: #0a0966;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  transition: background-color 1s;
+}
+
+.create-comment-button:hover {
+  background-color: #000ddd;
+}
