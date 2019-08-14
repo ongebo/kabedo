@@ -1,5 +1,6 @@
 toggleReactions();
 toggleCommentReactions();
+handleNavigation();
 
 var icon;
 var oppositeIcon;
@@ -92,4 +93,11 @@ function isDisliked(dislikeIcon) {
   } else {
     return false;
   }
+}
+
+function handleNavigation() {
+  var profileLink = document.querySelector(".view-profile");
+  profileLink.addEventListener("click", function() {
+    window.location.href = "user-profile.html";
+  });
 }
