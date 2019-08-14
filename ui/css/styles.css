@@ -56,6 +56,9 @@ html {
   flex-direction: row;
   justify-content: space-between;
   padding: 5px;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
 }
 
 .left-content {
