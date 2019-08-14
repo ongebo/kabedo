@@ -3,75 +3,6 @@ body {
   background: rgba(240, 240, 240, 0.9);
 }
 
-.header {
-  align-items: baseline;
-  background: #0a0966;
-  box-shadow: 0 0 10px rgba(10, 9, 102, 0.6);
-  color: white;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 5px;
-}
-
-.left-content {
-  display: flex;
-}
-
-.right-content {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.header-item {
-  color: white;
-  cursor: pointer;
-  padding: 10px;
-  transition: background-color 0.8s;
-}
-
-.header-item:hover {
-  background-color: #000ddd;
-}
-
-.logout-button {
-  background: #0a0966;
-  border: none;
-  font-size: 1em;
-}
-
-@media only screen and (max-width: 400px) {
-  .header,
-  .left-content {
-    flex-direction: column;
-  }
-
-  .left-content,
-  .right-content {
-    flex-basis: 100%;
-  }
-}
-
-.content {
-  margin: auto;
-  width: 50%;
-}
-
-/* Adjust dimensions for smartphone screen sizes. */
-@media only screen and (max-width: 600px) {
-  .content {
-    /* flex-direction: column; */
-    width: 100%;
-  }
-}
-
-/* Adjust dimensions for tablet screen sizes. */
-@media only screen and (min-width: 600px) and (max-width: 800px) {
-  .content {
-    width: 80%;
-  }
-}
-
 .post {
   box-shadow: 0 0 8px rgba(10, 9, 102, 0.6);
   margin-top: 20px;
@@ -119,18 +50,6 @@ body {
 .comment:hover,
 .share:hover {
   color: #000ddd;
-}
-
-.footer {
-  background: #0a0966;
-  margin-top: 20px;
-}
-
-.footer p {
-  color: white;
-  margin: 0;
-  padding: 30px 0;
-  text-align: center;
 }
 
 .active,
