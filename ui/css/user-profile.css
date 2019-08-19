@@ -1,9 +1,11 @@
+/****** Styles for the main content. ******/
+
 .content {
   padding-top: 2em;
 }
 
 .label {
-  color: gray;
+  color: #92979c;
   font-size: 0.9em;
 }
 
@@ -25,4 +27,230 @@
 .user-profile > p,
 h3 {
   text-align: center;
+}
+
+.edit-button {
+  color: #92979c;
+  font-size: 0.8em;
+  transition: color 1s;
+}
+
+.edit-button:hover {
+  color: #5b636b;
+  cursor: pointer;
+}
+
+/****** Styles for the popup modals. ******/
+
+.popup {
+  background: rgb(0, 0, 0); /* Fallback background. */
+  background: rgba(0, 0, 0, 0.8);
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  overflow: scroll;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: visibility 0s linear 0.6s, opacity 0.6s linear;
+  visibility: hidden;
+  z-index: 1000;
+}
+
+.show {
+  opacity: 1;
+  transition: opacity 0.6s linear;
+  visibility: visible;
+}
+
+.popup-content {
+  animation: slide-up 0.6s;
+  animation-fill-mode: forwards;
+  background: rgb(240, 240, 240); /* Fallback background. */
+  background: rgba(240, 240, 240, 0.9);
+  border-radius: 6px;
+  margin: auto;
+  padding: 10px;
+  width: 30%;
+}
+
+@keyframes slide-up {
+  from {
+    margin-top: 10%;
+    transform: scale(1);
+  }
+  to {
+    margin-top: 0;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes slide-down {
+  from {
+    margin-top: 0;
+    transform: scale(1.1);
+  }
+  to {
+    margin-top: 10%;
+    transform: scale(1);
+  }
+}
+
+.show-popup-content {
+  animation: slide-down 0.6s;
+  animation-fill-mode: forwards;
+}
+
+/* Adjust modal width for smartphone screen sizes. */
+@media only screen and (max-width: 600px) {
+  .popup-content {
+    width: 90%;
+  }
+}
+
+/* Adjust modal width for tablet screen sizes. */
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+  .popup-content {
+    width: 50%;
+  }
+}
+
+.update-heading {
+  text-align: center;
+}
+
+.update-confirm {
+  background: #115119;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  padding: 5px 8px;
+  transition: background-color 1s;
+}
+
+.update-confirm:hover {
+  background-color: #1e842a;
+}
+
+.update-cancel {
+  background: #8a041d;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  padding: 5px 8px;
+  transition: background-color 1s;
+}
+
+.update-cancel:hover {
+  background-color: #ba2b46;
+}
+
+/* Shown in the popup to edit a user's bio. */
+.update-text-area {
+  border: 1px solid #0a0966;
+  border-radius: 4px;
+  font-size: 1em;
+  height: 5em;
+  width: 100%;
+}
+
+/* Styles for the popup modals to edit hobbies, birthday, schools,
+and marital status. */
+
+.hobbies-list,
+.schools-list,
+.status-list {
+  border-bottom: 1px solid #0a0966;
+  padding-bottom: 4px;
+}
+
+.status-list {
+  border-bottom: none;
+}
+
+.hobbies-list input[type="checkbox"],
+.schools-list input[type="checkbox"],
+.status-list input[type="radio"] {
+  opacity: 0;
+  position: absolute;
+}
+
+.hobbies-list label,
+.schools-list label,
+.status-list label {
+  border: 1px solid #0a0966;
+  border-radius: 7px;
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 2px;
+  padding: 2px 4px;
+  user-select: none;
+  white-space: nowrap;
+}
+
+input[type="checkbox"]:checked + label,
+input[type="radio"]:checked + label {
+  background: #0a0966;
+  color: white;
+}
+
+input[type="checkbox"]:focus + label,
+input[type="radio"]:focus + label {
+  border: 1px solid green;
+}
+
+.hobbies-list label::before,
+.schools-list label::before,
+.status-list label::before {
+  content: "\002B";
+  padding: 2px 3px;
+}
+
+input[type="checkbox"]:checked + label::before,
+input[type="radio"]:checked + label::before {
+  content: "\2713";
+}
+
+.hobbies-add,
+.schools-add {
+  padding: 4px 0;
+}
+
+.hobbies-add input,
+.schools-add input,
+.birthday-input {
+  border: 1px solid lightgray;
+  border-radius: 6px;
+  color: #0a0966;
+  font-size: 0.9em;
+  padding: 5px;
+  transition: border 1s;
+}
+
+.hobbies-add input:hover,
+.schools-add input:hover,
+.birthday-input:hover {
+  border: 1px solid #0a0966;
+}
+
+.hobbies-add button,
+.schools-add button {
+  background-color: #040559;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  transition: background-color 1s;
+}
+
+.hobbies-add button:hover,
+.schools-add button:hover {
+  background-color: #000ddd;
+}
+
+.error {
+  border: 1px solid red;
 }

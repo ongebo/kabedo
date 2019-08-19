@@ -15,7 +15,7 @@ body {
   position: relative;
 }
 
-input {
+form input {
   border: 1px solid lightgray;
   border-radius: 6px;
   color: #0a0966;

@@ -16,6 +16,7 @@
     <title>My Profile</title>
   </head>
   <body>
+    <!-- Page navigation bar -->
     <div class="header">
       <div class="left-content">
         <div class="header-item logo">Kabedo</div>
@@ -30,6 +31,8 @@
         <button class="header-item logout-button">Logout</button>
       </div>
     </div>
+
+    <!-- Page body -->
     <div class="content">
       <div class="user-profile">
         <img
@@ -41,18 +44,125 @@
         <p>
           <span class="label">bio: </span>
           I'm a huge fan of Arsenal, a professional software developer at
-          Andela.
+          Andela. <i class="fas fa-edit edit-button bio-editor"></i>
         </p>
-        <p><span class="label">hobbies: </span>Movies, Video Games</p>
-        <p><span class="label">birthday: </span>20th March, 1920</p>
+        <p>
+          <span class="label">hobbies: </span>Movies, Video Games
+          <i class="fas fa-edit edit-button hobbies-editor"></i>
+        </p>
+        <p>
+          <span class="label">birthday: </span>20th March, 1920
+          <i class="fas fa-edit edit-button birthday-editor"></i>
+        </p>
         <p>
           <span class="label">schools: </span>St. Kizito, Harvard Law School.
+          <i class="fas fa-edit edit-button schools-editor"></i>
         </p>
-        <p><span class="label">marital status: </span>Married with 10 wives.</p>
+        <p>
+          <span class="label">marital status: </span>Single.
+          <i class="fas fa-edit edit-button status-editor"></i>
+        </p>
       </div>
     </div>
+
+    <!-- Popup modals to edit user profile -->
+
+    <!-- Modal for users to edit their Bios -->
+    <div class="popup" id="bio">
+      <div class="popup-content">
+        <h4 class="update-heading">Edit your Bio</h4>
+        <textarea class="update-text-area"></textarea>
+        <button class="update-confirm">Update</button>
+        <button class="update-cancel">Cancel</button>
+      </div>
+    </div>
+
+    <!-- Modal for users to edit their Hobbies -->
+    <div class="popup" id="hobbies">
+      <div class="popup-content">
+        <h4 class="update-heading">What things do you like?</h4>
+        <div class="hobbies-list">
+          <input type="checkbox" id="fifa" /><label for="fifa">FIFA</label>
+          <input type="checkbox" id="mk" /><label for="mk">Mortal Kombat</label>
+          <input type="checkbox" id="swimming" /><label for="swimming"
+            >Swimming</label
+          >
+          <input type="checkbox" id="singing" /><label for="singing"
+            >Singing</label
+          >
+          <input type="checkbox" id="movies" /><label for="movies"
+            >Movies</label
+          >
+        </div>
+        <div class="hobbies-add">
+          <input type="text" placeholder="enter hobby..." />
+          <button>Add</button>
+        </div>
+        <button class="update-confirm">Update</button>
+        <button class="update-cancel">Cancel</button>
+      </div>
+    </div>
+
+    <!-- Modal for users to edit their Birthday -->
+    <div class="popup" id="birthday">
+      <div class="popup-content">
+        <h4 class="update-heading">When were you born?</h4>
+        <input class="birthday-input" type="text" placeholder="dd-mm-yyyy" />
+        <button class="update-confirm">Update</button>
+        <button class="update-cancel">Cancel</button>
+      </div>
+    </div>
+
+    <!-- Modal for users to edit their Schools -->
+    <div class="popup" id="schools">
+      <div class="popup-content">
+        <h4 class="update-heading">Which schools did you attend?</h4>
+        <div class="schools-list">
+          <input type="checkbox" id="SMACK" /><label for="SMACK">SMACK</label>
+          <input type="checkbox" id="Namilyango College" /><label
+            for="Namilyango College"
+            >Namilyango College</label
+          >
+          <input type="checkbox" id="Gayaza High School" /><label
+            for="Gayaza High School"
+            >Gayaza High School</label
+          >
+        </div>
+        <div class="schools-add">
+          <input type="text" placeholder="enter school..." />
+          <button>Add</button>
+        </div>
+        <button class="update-confirm">Update</button>
+        <button class="update-cancel">Cancel</button>
+      </div>
+    </div>
+
+    <!-- Modal for users to edit their Marital Statuses -->
+    <div class="popup" id="marital-status">
+      <div class="popup-content">
+        <h4 class="update-heading">What's your marital status?</h4>
+        <div class="status-list">
+          <input type="radio" name="status" id="Single" /><label for="Single"
+            >Single</label
+          >
+          <input type="radio" name="status" id="Married" /><label for="Married"
+            >Married</label
+          >
+          <input type="radio" name="status" id="Single and Searching" /><label
+            for="Single and Searching"
+            >Single and Searching</label
+          >
+        </div>
+        <button class="update-confirm">Update</button>
+        <button class="update-cancel">Cancel</button>
+      </div>
+    </div>
+
+    <!-- Page footer -->
     <div class="footer">
       <p>&copy; Kabedo 2019</p>
     </div>
+
+    <script src="../js/user-profile.js"></script>
   </body>
 </html>
